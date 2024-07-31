@@ -1,0 +1,187 @@
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+/* ------small flame styling-------- */
+
+
+
+/* .container {
+    width: 60px;
+    height: 60px;
+    transform-origin: center bottom;
+    animation: flicker 3s 200ms ease-in infinite alternate;
+}
+
+.flame {
+    bottom: 0;
+    position: absolute;
+    border-bottom-right-radius: 50%; 
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform: rotate(-45deg) scale(1.5, 1.5);
+}
+
+.yellow {
+    left: 15px;
+    height: 30px;
+    width: 30px;
+    background: gold;
+    box-shadow: 0px 0px 9px 4px gold;
+}
+
+.orange {
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    background: orange;
+    box-shadow: 0px 0px 9px 4px orange;
+}
+
+.red {
+    left: 5px;
+    height: 50px;
+    width: 50px;
+    background: orangered;
+    box-shadow: 0px 0px 5px 4px orangered;
+}
+
+.white {
+    left: 15px;
+    bottom: -4px;
+    height: 30px;
+    width: 30px;
+    background: white;
+    box-shadow: 0px 0px 9px 4px white;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.blue {
+    width: 10px;
+    height: 10px;
+    left: 25px;
+    bottom: -25px;
+    background: slateblue;
+    box-shadow: 0px 0px 15px 10px slateblue;
+}
+
+.black {
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    bottom: -60px;
+    background: black;
+    box-shadow: 0px 0px 15px 10px black;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------big flame styling-------- */
+
+
+
+/* body {
+    background: black;
+    display: grid;
+    place-items: center;
+    height: 95vh;
+} */
+
+.container {
+    width: 90px; /* Increased from 60px */
+    height: 90px; /* Increased from 60px */
+    transform-origin: center bottom;
+    animation: flicker 3s 200ms ease-in infinite alternate;
+    position: relative;
+}
+
+.flame {
+    bottom: 0;
+    position: absolute;
+    border-bottom-right-radius: 50%; 
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform: rotate(-45deg) scale(1.5, 1.5);
+}
+
+.yellow {
+    left: 22.5px; /* Increased from 15px */
+    height: 45px; /* Increased from 30px */
+    width: 45px; /* Increased from 30px */
+    background: gold;
+    box-shadow: 0px 0px 13.5px 6px gold; /* Increased box shadow */
+}
+
+.orange {
+    left: 15px; /* Increased from 10px */
+    height: 60px; /* Increased from 40px */
+    width: 60px; /* Increased from 40px */
+    background: orange;
+    box-shadow: 0px 0px 13.5px 6px orange; /* Increased box shadow */
+}
+
+.red {
+    left: 7.5px; /* Increased from 5px */
+    height: 75px; /* Increased from 50px */
+    width: 75px; /* Increased from 50px */
+    background: orangered;
+    box-shadow: 0px 0px 7.5px 6px orangered; /* Increased box shadow */
+}
+
+.white {
+    left: 22.5px; /* Increased from 15px */
+    bottom: -6px; /* Increased from -4px */
+    height: 45px; /* Increased from 30px */
+    width: 45px; /* Increased from 30px */
+    background: white;
+    box-shadow: 0px 0px 13.5px 6px white; /* Increased box shadow */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.blue {
+    width: 15px; /* Increased from 10px */
+    height: 15px; /* Increased from 10px */
+    left: 37.5px; /* Increased from 25px */
+    bottom: -37.5px; /* Increased from -25px */
+    background: slateblue;
+    box-shadow: 0px 0px 22.5px 15px slateblue; /* Increased box shadow */
+}
+
+.black {
+    width: 60px; /* Increased from 40px */
+    height: 60px; /* Increased from 40px */
+    left: 15px; /* Increased from 10px */
+    bottom: -90px; /* Increased from -60px */
+    background: black;
+    box-shadow: 0px 0px 22.5px 15px black; /* Increased box shadow */
+}
+
+@keyframes flicker {
+    0% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    40% { transform: rotate(-1deg); }
+    60% { transform: rotate(1deg) scaleY(1.04); }
+    80% { transform: rotate(-2deg) scaleY(0.92); }
+    100% { transform: rotate(1deg); }
+}

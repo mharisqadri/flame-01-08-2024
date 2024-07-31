@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Animation</title>
+    <style>
+        body {
+            background: black;
+            display: flex; /* Use flexbox to arrange items side by side */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            height: 95vh;
+        }
+
+        /* ------common flame styling-------- */
+        .container {
+            position: relative;
+            margin: 0 20px; /* Add margin between flames */
+        }
+
+        .flame {
+            position: absolute;
+            bottom: 0;
+            border-bottom-right-radius: 50%; 
+            border-bottom-left-radius: 50%;
+            border-top-left-radius: 50%;
+            transform: rotate(-45deg) scale(1.5);
+        }
+
+        .yellow, .orange, .red, .white {
+            position: absolute;
+            box-shadow: 0px 0px 9px 4px gold;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        /* ------small flame styling-------- */
+        .container.sm {
+            width: 60px;
+            height: 60px;
+            transform-origin: center bottom;
+            animation: flicker 3s 200ms ease-in infinite alternate;
+        }
+
+        .flame.sm {
+            border-bottom-right-radius: 50%; 
+            border-bottom-left-radius: 50%;
+            border-top-left-radius: 50%;
+        }
+
+        .yellow.sm {
+            left: 15px;
+            height: 30px;
+            width: 30px;
+            background: gold;
+            box-shadow: 0px 0px 9px 4px gold;
+        }
+
+        .orange.sm {
+            left: 10px;
+            height: 40px;
+            width: 40px;
+            background: orange;
+            box-shadow: 0px 0px 9px 4px orange;
+        }
+
+        .red.sm {
+            left: 5px;
+            height: 50px;
+            width: 50px;
+            background: orangered;
+            box-shadow: 0px 0px 5px 4px orangered;
+        }
+
+        .white.sm {
+            left: 15px;
+            bottom: -4px;
+            height: 30px;
+            width: 30px;
+            background: white;
+            box-shadow: 0px 0px 9px 4px white;
+        }
+
+        .blue.sm {
+            width: 10px;
+            height: 10px;
+            left: 25px;
+            bottom: -25px;
+            background: slateblue;
+            box-shadow: 0px 0px 15px 10px slateblue;
+        }
+
+        .black.sm {
+            width: 40px;
+            height: 40px;
+            left: 10px;
+            bottom: -60px;
+            background: black;
+            box-shadow: 0px 0px 15px 10px black;
+        }
+
+        /* ------big flame styling-------- */
+        .container.lg {
+            width: 90px;
+            height: 90px;
+            transform-origin: center bottom;
+            animation: flicker 3s 200ms ease-in infinite alternate;
+        }
+
+        .yellow.lg {
+            left: 22.5px;
+            height: 45px;
+            width: 45px;
+            background: gold;
+            box-shadow: 0px 0px 13.5px 6px gold;
+        }
+
+        .orange.lg {
+            left: 15px;
+            height: 60px;
+            width: 60px;
+            background: orange;
+            box-shadow: 0px 0px 13.5px 6px orange;
+        }
+
+        .red.lg {
+            left: 7.5px;
+            height: 75px;
+            width: 75px;
+            background: orangered;
+            box-shadow: 0px 0px 7.5px 6px orangered;
+        }
+
+        .white.lg {
+            left: 22.5px;
+            bottom: -6px;
+            height: 45px;
+            width: 45px;
+            background: white;
+            box-shadow: 0px 0px 13.5px 6px white;
+        }
+
+        .blue.lg {
+            width: 15px;
+            height: 15px;
+            left: 37.5px;
+            bottom: -37.5px;
+            background: slateblue;
+            box-shadow: 0px 0px 22.5px 15px slateblue;
+        }
+
+        .black.lg {
+            width: 60px;
+            height: 60px;
+            left: 15px;
+            bottom: -90px;
+            background: black;
+            box-shadow: 0px 0px 22.5px 15px black;
+        }
+
+        @keyframes flicker {
+            0% { transform: rotate(-1deg); }
+            20% { transform: rotate(1deg); }
+            40% { transform: rotate(-1deg); }
+            60% { transform: rotate(1deg) scaleY(1.04); }
+            80% { transform: rotate(-2deg) scaleY(0.92); }
+            100% { transform: rotate(1deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Small flame container -->
+    <div class="container sm">
+        <div class="flame sm red"></div>
+        <div class="flame sm orange"></div>
+        <div class="flame sm yellow"></div>
+        <div class="flame sm white"></div>
+        <div class="circle sm blue"></div>
+        <div class="circle sm black"></div>
+    </div>
+
+    <!-- Large flame container -->
+    <div class="container lg">
+        <div class="flame lg red"></div>
+        <div class="flame lg orange"></div>
+        <div class="flame lg yellow"></div>
+        <div class="flame lg white"></div>
+        <div class="circle lg blue"></div>
+        <div class="circle lg black"></div>
+    </div>
+</body>
+</html>
